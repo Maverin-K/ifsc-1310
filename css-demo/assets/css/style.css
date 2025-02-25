@@ -1,5 +1,13 @@
 /* CSS Demo Stylesheet */
 
 body {
-background-color:blanchedalmond;
+background-color:#ffebcd;
 }
+
+Color Theme Swatches in Hex
+.Color-1 { color: #F0A66E; }
+.Color-2 { color: #F0CC6E; }
+.Color-3 { color: #F0BC6E; }
+.Color-4 { color: #F0906E; }
+.Color-5 { color: #f0db6e; }
+.background-color { color: #ffebcd; }
