@@ -9,12 +9,19 @@ html {
 *:after {
     box-sizing: inherit;
 }
-
-.container{
+/*------------------ Utility Classes -----------------------*/
+.container {
     width:80vw;
     max-width:960px;
     margin:40px auto;
 }
+
+/*------------------ Responsive Images ---------------------*/
+
+img {
+    max-width:100%;
+}
+
 
 body {
 background-color:#ffebcd;
@@ -50,7 +57,7 @@ background-color:#ffebcd;
         padding: 20px 40px;
     }
 
-    header.primary h1{
+    header.primary h1 {
         font-size:2.4rem;
         /* Top | left and right | bottom */
         margin: 20px 0 0;
@@ -61,16 +68,17 @@ background-color:#ffebcd;
         text-decoration:none;
     }
 
-    header.primary h2{
+    header.primary h2 {
         font-size: 1.3rem;
         margin: 0;
         letter-spacing:.2px;
     }
 
-    nav.primary{
+    nav.primary {
         text-decoration:none;
     }
-    nav.primary ul{
+
+    nav.primary ul {
         padding:0;
         display:flex;
         flex-direction:row;
@@ -78,10 +86,12 @@ background-color:#ffebcd;
         max-width:960px;
         margin:20px auto;
     }
-    nav.primary ul li{
+
+    nav.primary ul li {
         list-style-type:none;
     }
-    nav.primary ul li a{
+
+    nav.primary ul li a {
         color:darkblue;
         font-size:.9rem;
         text-decoration:none;
@@ -95,7 +105,7 @@ background-color:#ffebcd;
         transition:.4s;
     }
 
-    nav.primary ul li a:hover{
+    nav.primary ul li a:hover {
         background-color:rgba(255, 255, 255, 0.687);
     }
 
@@ -114,13 +124,79 @@ background-color:#ffebcd;
         padding: 5px 0 5px 10px;
     }
 
-    @media screen and (max-width:680px){
+    #blog {
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
+        gap:20px;
+        border-top:2px solid black;
+        padding-top:40px;
+
+    }
+
+    #blog article.post {
+        background-color:#F0A66E;
+        box-shadow: 0px 4px 10px 1px black;
+        padding: 5px 10px;
+        font-size:.8rem;
+        border-radius:8px;
+        /*transition:.4s;*/
+    }
+
+    figure {
+        margin:0;
+    }
+
+    figcaption, time {
+        text-transform:uppercase;
+        font-size:.5rem;
+        text-shadow:black;
+    }
+
+    #blog article.post a {
+        background:green;
+    }
+
+    aside[role="complementary"] {
+        background:#F0906E;
+        padding:40px 0;
+    }
+
+    aside .container {
+        display:flex;
+        flex-direction: row;
+        gap:40px;
+    }
+
+    aside .container a {
+        color:#ffffff;
+    }
+/* the top changes all links to white text, and below only the last link will be indented and shifted to the right. */
+    aside .container a:last-child {
+        display:block;
+        text-align:right;
+    }
+
+    aside footer {
+        display:none;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    @media screen and (max-width:680px) {
         nav.primary ul{
             flex-direction:column;
             gap:1px;
             max-width:200px;
-            margin:20px auto;
-            
+            margin:20px auto; 
         }
         nav.primary ul li a{
             display:block;
