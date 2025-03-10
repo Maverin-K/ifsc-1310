@@ -16,6 +16,28 @@ html {
     margin:40px auto;
 }
 
+.img-right{
+    float:right;
+    border:1px solid #000000;
+    padding:5px;
+    margin:10px 0 10px 20px;
+    /*max-width:30vw; since this is a global container ALL imagines with this container are going to be 30% of the page size*/
+
+
+}
+.img-left{
+    float:left;
+    border:1px solid #000000;
+    padding:5px;
+    margin:10px 20px 10px 0px;
+}
+.img-center{
+    display:block;
+    margin:10px auto;
+    border:1px solid #000000;
+    padding:5px;
+}
+
 /*------------------ Responsive Images ---------------------*/
 
 img {
@@ -36,9 +58,11 @@ background-color:#ffebcd;
     main {
 
     }
-
+/*svg the unique backgrounds that can be put into our code*/
     header.primary {
         background-color:#F0A66E;
+        background-color: #F0A66E;
+        background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%230c041a' fill-opacity='0.2'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         color:#000000;
 
         text-align: center;
@@ -130,8 +154,8 @@ background-color:#ffebcd;
         justify-content:center;
         gap:20px;
         border-top:2px solid black;
-        padding-top:40px;
-
+        border-bottom:2px solid black;
+        padding:40px 0px;
     }
 
     #blog article.post {
@@ -181,7 +205,61 @@ background-color:#ffebcd;
         display:none;
     }
 
+    aside article footer {
+        display:none
+    }
 
+    #colophon{
+        background-color:#F0A66E;
+        padding:1px;
+        text-align:center;
+        color:#ffffff;
+        text-shadow:1px 1px #ffffff;
+    }
+
+    #practice h2 {
+        background-color:green;
+    }
+
+    #practice a {
+        background-color:green;
+    }
+
+    #practice a:hover {
+        text-decoration:none;
+    }
+
+    table{
+        width:100%;
+        border:1px solid #000000;
+        border-collapse:collapse;
+    }
+    caption{
+        font-weight: bold;
+        margin: 10px;
+        font-size:1.3rem;
+    }
+    tr:nth-child(even){
+        background-color: rgba(0, 0, 0, 0);
+
+    }
+    tr:nth-child(odd){
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    tr:hover{
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    th{
+        background-color:#c56643;
+        padding:7.5px;
+    }
+    td{
+        border:1px solid #000000;
+        padding:5px;
+    }
+    td:nth-child(n+2){
+        text-align:right;
+    }
 
 
 
