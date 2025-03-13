@@ -52,6 +52,7 @@ background-color:#ffebcd;
     font-weight: 300;
     font-style: normal;
     margin:0;
+    
 }
 
     main {
@@ -62,27 +63,27 @@ background-color:#ffebcd;
         background-color:#F0A66E;
         background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%230c041a' fill-opacity='0.2'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         color:#000000;
-
         text-align: center;
         text-shadow: 2px 2px #F0906E;
-
         padding-top: 40px;
         padding-right: 40px;
         padding-bottom: 40px;
         padding-left: 40px;
-
         /*or if you wanted it all to be the same value*/
         padding: 40px;
         /*or Top, Right, Bottom, Left */
         padding: 20px 40px 20px 40px;
         /*or! Two Values Top/Bottom / L/R*/
         padding: 20px 40px;
+        border:4px dotted black;
+        border-radius:30px;
     }
 
     header.primary h1 {
         font-size:2.4rem;
         /* Top | left and right | bottom */
-        margin: 20px 0 0;
+        margin: 20px auto;
+        
     }
 
     header.primary h1 a {
@@ -114,15 +115,15 @@ background-color:#ffebcd;
     }
 
     nav.primary ul li a {
-        color:darkblue;
+        color:#00008b;
         font-size:.9rem;
         text-decoration:none;
         text-shadow:none;
-        border: 1px dashed darkblue;
+        border: 1px dashed #00008b;
         border-radius:20px 5px;
         padding: 1px 10px;
         /* Most time designers will use both background because some browsers don't support rgb */
-        background-color:white;
+        background-color:#ffffff;
         background-color:rgba(255, 255, 255, 0.479);
         transition:.4s;
     }
@@ -134,15 +135,20 @@ background-color:#ffebcd;
 
     #content {
         background-color:#F0A66E;
+        /*or Top, Right, Bottom, Left */
+        border:4px dotted #000000;
+        border-radius:30px;
+        padding: 0px 10px 1px 10px;
     }
 
     #content h2{
-        color:white;
-        border-bottom: 2px dotted white;
+        color:#ffffff;
+        border-bottom: 2px dotted #ffffff;
+        text-align:center;
     }
     
     #content h3{
-        border-left: 5px solid white;
+        border-left: 5px solid #ffffff;
         padding: 5px 0 5px 10px;
     }
 
@@ -151,16 +157,19 @@ background-color:#ffebcd;
         flex-direction:row;
         justify-content:center;
         gap:20px;
-        border-top:2px solid black;
-        border-bottom:2px solid black;
+        border-top:2px solid #000000;
+        border-bottom:2px solid #000000;
         padding:40px 0px;
     }
 
     #blog article.post {
         background-color:#F0A66E;
-        box-shadow: 0px 4px 10px 1px black;
+        background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%230c041a' fill-opacity='0.2'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        box-shadow: 0px 4px 10px 1px #000000;
         padding: 5px 10px;
         font-size:.8rem;
+        color:#ffffff;
+        text-shadow:1px 1px #000000;
         border-radius:8px;
         /*transition:.4s;*/
     }
@@ -172,16 +181,17 @@ background-color:#ffebcd;
     figcaption, time {
         text-transform:uppercase;
         font-size:.5rem;
-        text-shadow:black;
+        text-shadow:#000000;
     }
 
     #blog article.post a {
-        background:green;
+        color:#00008b;
     }
 
     aside[role="complementary"] {
         background:#F0906E;
-        padding:40px 0;
+        padding:40px 0px;
+        margin:0px;
     }
 
     aside .container {
@@ -215,12 +225,22 @@ background-color:#ffebcd;
         text-shadow:1px 1px #ffffff;
     }
 
+    #practice {
+        background-color:#F0A66E;
+        /*or Top, Right, Bottom, Left */
+        border:4px dotted #000000;
+        border-radius:30px;
+        padding: 0px 10px 1px 10px;
+    }
+
     #practice h2 {
-        background-color:green;
+        color:#ffffff;
+        border-bottom: 2px dotted #ffffff;
+        text-align:center;
     }
 
     #practice a {
-        background-color:green;
+        color:#00008b;
     }
 
     #practice a:hover {
@@ -259,22 +279,75 @@ background-color:#ffebcd;
         text-align:right;
     }
 
-    #practice ol{
-        background-color:green;
+    #practice2 h3 {
+        background-color:#F0A66E;
+        /*or Top, Right, Bottom, Left */
+        border:4px dotted #000000;
+        border-radius:30px;
+        padding: 1px 0px 3px 0px;
+        text-align:center;
+        color:#ffffff;
+    }
+
+    #practice2 p {
+        background-color:#F0A66E;
+        /*or Top, Right, Bottom, Left */
+        border:4px dotted #000000;
+        border-radius:30px;
+        padding: 4px 15px 6px 15px;
+        margin:30px 0px;
+    }
+
+    #practice3 {
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
+        gap:20px;
+        border-top:2px solid #000000;
+        border-bottom:2px solid #000000;
+        padding:40px 0px;
+        margin:40px 80px;
+    }
+
+    #practice3 ul {
+        background-color:#F0A66E;
+        /*or Top, Right, Bottom, Left */
+        border:4px dotted #000000;
+        border-radius:30px;
+        padding: 4px 10px 6px 30px;
+    }
+
+    #practice3 ul ul {
+        border:none;
+    }
+
+    #practice3 ol{
+        background-color:#F0A66E;
+        /*or Top, Right, Bottom, Left */
+        border:4px dotted #000000;
+        border-radius:30px;
+        padding: 4px 10px 6px 35px;
         list-style-type:upper-roman;
     }
 
     /*Highest level specificity, #practice ul ul will work but may overlap in the future*/
-    #practice ul li ul li{
-        background-color:green;
+    #practice3 ul li ul li{
         list-style-type:square;
     }
 
-    #practice dl dt{
+    #practice3 dl{
+        background-color:#F0A66E;
+        /*or Top, Right, Bottom, Left */
+        border:4px dotted #000000;
+        border-radius:30px;
+        padding: 4px 15px 6px 15px;
+    }
+
+    #practice3 dl dt{
         font-weight:bold;
     }
 
-    #practice dl dd{
+    #practice3 dl dd{
         margin:0;
     }
 
@@ -283,22 +356,58 @@ background-color:#ffebcd;
         margin-top:20px;
     }
 
-    #practice blockquote{
-        border:4px dotted black;
+    h4 {
+        background-color:#F0A66E;
+        /*or Top, Right, Bottom, Left */
+        border:4px dotted #000000;
+        border-radius:30px;
+        padding: 1px 0px 3px 0px;
+        text-align:center;
+        color:#ffffff;
+        margin:45px 100px 25px 100px;
+    }
+
+    #practice4 {
+        border-bottom:2px solid #000000;
+        margin:40px 80px;
+    }
+
+    #practice4 blockquote{
+        border:4px dotted #000000;
         padding:20px 40px;
         margin: 40px 80px;
         border-radius:30px;
         background-color:#F0A66E;
         background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%230c041a' fill-opacity='0.2'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        color:white;
-        text-shadow:1px 1px black;
+        color:#ffffff;
+        text-shadow:1px 1px #000000;
     }
 
-    #practice blockquote cite{
+    #practice4 blockquote cite{
         display:block;
         text-align:right;
         font-size:0.7rem;
         margin-top:0.8rem;
+    }
+
+    #practice5 h3 {
+        background-color:#F0A66E;
+        /*or Top, Right, Bottom, Left */
+        border:4px dotted #000000;
+        border-radius:30px;
+        padding: 1px 0px 3px 0px;
+        text-align:center;
+        color:#ffffff;
+        margin:40px 80px;
+    }
+
+    #practice5 p {
+        background-color:#F0A66E;
+        /*or Top, Right, Bottom, Left */
+        border:4px dotted #000000;
+        border-radius:30px;
+        padding: 4px 15px 6px 15px;
+        margin:40px 80px;
     }
 
 
