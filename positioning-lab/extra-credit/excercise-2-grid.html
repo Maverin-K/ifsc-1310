@@ -7,12 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Positioning Lab</title>
   <style type="text/css">
+    /*using the previous excercise I could figure out the color boxes, I did need help with the footer however. Then again I didn't like AI's answer and used my own, it is hard coded throuh however.*/
     /* ---------------Box Sizing----------------- */
     html {
       box-sizing: border-box;
     }
-    /*box size needs to be 370px long*/
-    /*355 + 355 + 30 + 30 + 15 + 15*/
     *,
     *:before,
     *:after {
@@ -26,7 +25,6 @@
       text-align: center;
       line-height: 24px;
     }
-
     #wrapper {
       background-color: #FFF;
       border: 1px solid #c0c0c0;
@@ -34,46 +32,35 @@
       margin-right: auto;
       margin-left: auto;
       text-shadow: 2px 2px #000;
+      display:grid;
+      grid-template-columns:repeat(4, 180px);
+      grid-template-rows:repeat(1, 180px) auto;
+      gap:16px;
+      justify-content:center;
     }
     #navy {
       background-color: #001f3f;
-      width:355px;
-      height: 150px;
-      float:left;
-      margin:30px 14px 15px 30px;
+      margin-top:16px;
     }
     #teal {
       background-color: #39CCCC;
-      width:355px;
-      height: 150px;
-      float:right;
-    /*or Top, Right, Bottom, Left */
-      margin:30px 30px 15px 14px;
-
+      margin-top:16px;
     }
     #blue {
       background-color: #0074D9;
-      width:355px;
-      height: 150px;
-      float:left;
-      margin:15px 14px 30px 30px;
-
-
+      margin-top:16px;
     }
     #aqua {
       background-color: #7FDBFF;
-      width:355px;
-      height: 150px;
-      float:right;
-      margin:15px 30px 30px 14px;
-
+      margin-top:16px;
     }
     #footer {
       background-color: #666;
-      float:left clear;
     /*or Top, Right, Bottom, Left */
-      margin:390px 30px 30px 30px;
+      margin:0px 0px 16px 0px;
+      width:768px;
     }
+
     h1 {
       color: #000;
       font-weight: normal;
