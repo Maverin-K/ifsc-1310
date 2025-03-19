@@ -11,8 +11,6 @@
     html {
       box-sizing: border-box;
     }
-    /*box size needs to be 370px long*/
-    /*355 + 355 + 30 + 30 + 15 + 15*/
     *,
     *:before,
     *:after {
@@ -25,8 +23,12 @@
       color: #FFF;
       text-align: center;
       line-height: 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto 1fr auto;
+      height: 100vh;
+      margin: 0;
     }
-
     #wrapper {
       background-color: #FFF;
       border: 1px solid #c0c0c0;
@@ -34,70 +36,68 @@
       margin-right: auto;
       margin-left: auto;
       text-shadow: 2px 2px #000;
+      grid-column: 1 / -1;
+      text-align: center;
     }
-    /*If I wanted to clean up my code I could do so by creating a class like class="tile" and making my css like
-    .tile{
-    width: 370px;
-    height: 150px;
-    float: left;
-    margin: 0 0 20px 20px;
-    }
-    if I didn't do left right left right*/
+
     #navy {
       background-color: #001f3f;
-      width:355px;
-      height: 150px;
-      float:left;
-      margin:30px 14px 15px 30px;
+      text-shadow: 2px 2px #000;
+      width: 180px;
+      height: 180px;
+      align-self: flex-start;
     }
     #teal {
       background-color: #39CCCC;
-      width:355px;
-      height: 150px;
-      float:right;
-    /*or Top, Right, Bottom, Left */
-      margin:30px 30px 15px 14px;
-
+      text-shadow: 2px 2px #000;
+      width: 180px;
+      height: 180px;
+      align-self: flex-start;
+      justify-self: end;
     }
     #blue {
       background-color: #0074D9;
-      width:355px;
-      height: 150px;
-      float:left;
-      margin:15px 14px 30px 30px;
-
-
+      text-shadow: 2px 2px #000;
+      width: 180px;
+      height: 180px;
+      align-self: end;
+      justify-self: start;
     }
     #aqua {
       background-color: #7FDBFF;
-      width:355px;
-      height: 150px;
-      float:right;
-      margin:15px 30px 30px 14px;
-
+      text-shadow: 2px 2px #000;
+      width: 180px;
+      height: 180px;
+      align-self: end;
+      justify-self: end;
     }
     #footer {
       background-color: #666;
-      float:left clear;
-    /*or Top, Right, Bottom, Left */
-      margin:390px 30px 30px 30px;
+      width: 180px;
+      height: 180px;
+      grid-column: 1 / -1;
+      align-self: center;
+      justify-content:center;
     }
     h1 {
       color: #000;
       font-weight: normal;
       padding: 50px;
+      grid-column: 1 / -1;
     }
   </style>
 </head>
+
 <body>
+  <div id="navy">Navy</div>
+  <div id="teal">Teal</div>
   <h1>Exercise</h1>
   <section id="wrapper">
-    <div id="navy">Navy</div>
-    <div id="teal">Teal</div>
-    <div id="blue">Blue</div>
-    <div id="aqua">Aqua</div>
     <div id="footer">Footer</div>
   </section>
+  <div id="blue">Blue</div>
+  <div id="aqua">Aqua</div>
+
 </body>
 
 </html>
