@@ -16,21 +16,90 @@
 
 }
 body {
-  /*background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100" height="100" fill="%234b3621"/><rect x="10" y="10" width="8" height="8" fill="%235a4230"/><rect x="30" y="20" width="8" height="8" fill="%233f2d1e"/><rect x="50" y="5" width="8" height="8" fill="%23624531"/><rect x="70" y="40" width="8" height="8" fill="%233a2719"/><rect x="20" y="60" width="8" height="8" fill="%23513b29"/><rect x="60" y="75" width="8" height="8" fill="%23402e1f"/><rect x="80" y="20" width="8" height="8" fill="%23593f2d"/><rect x="40" y="50" width="8" height="8" fill="%234a3525"/><rect x="10" y="80" width="8" height="8" fill="%2360422f"/></svg>');*/
-  background-image:url(../terraria-project/assets/img/Dirt\ Wall.jpg);
+  background-image:url(../terraria-project/assets/img/better-dirt-wall.jpg);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* ⛔ Prevent horizontal scroll */
+  font-family: sans-serif;
 }
 
-header  h1{
-  text-align:center;
-  padding:13px;
-  margin:-10px -10px;
-  background:url(../terraria-project/assets/img/Dirt\ Block\ Edited.jpg);
+header.primary {
+  text-align: center;
+  padding: 8rem;
+/*or Top, Right, Bottom, Left */
+  margin:-50px 0px -50px 0;
+  background-image: url(../terraria-project/assets/img/medium-stone-wall.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  color:#ffffff;
+  text-shadow: 2px 2px black;
 }
-nav {
-  text-align:center;
-  
-  background-image:url(../terraria-project/assets/img/Stone\ block.png);
+header.primary h1 a{
+  color:#ffffff;
+  text-shadow: 2px 2px black;
 }
+
+nav.primary ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center
+}
+
+nav.primary ul li a {
+  border: 1px dashed #00008b;
+  border-radius:20px 5px;
+  padding: 1px 10px;
+  background-color:#ffffff;
+  background-color:rgba(0, 0, 0, 0.479);
+  transition:.4s;
+}
+
+nav.primary li a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+  display: block;
+}
+
+.stone-panel {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 3rem 2rem;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px black;
+  border-radius: 12px;
+
+  background-image: url('../terraria-project/assets/img/large-long-stone-wall.png');
+  background-size: 100% 100%; /* fills container */
+  background-repeat: no-repeat;
+  background-position: center;
+
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+}
+
+/* Responsive scaling */
+@media screen and (max-width: 600px) {
+  .stone-panel {
+    padding: 2rem 1rem;
+    background-size: cover;
+  }
+
+  .stone-panel h2 {
+    font-size: 1.5rem;
+  }
+
+  .stone-panel p {
+    font-size: 1rem;
+  }
+}
+
   </style>
 
   
@@ -38,9 +107,9 @@ nav {
 
 <body>
   <header role="banner" class="primary">
-    <h1><a href="index.html">Site Name</a></h1>
-    <h2>Site Tagline</h2>
-    <nav role="navigation">
+    <h1><a href="index.html">Terraria Fan Page</a></h1>
+    <h2>300 hours later</h2>
+    <nav role="navigation" class="primary">
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Wiki</a></li>
@@ -49,8 +118,8 @@ nav {
       </ul>
     </nav>
   </header>
-  <section id="content" class="container">
-    <h2>Page Name</h2>
+  <section class="content, stone-panel">
+    <h2>Terraria Content</h2>
     <p>Integer pretium fringilla mauris, sed cursus purus consectetur eu. Donec vitae placerat enim. Nam dictum purus nec diam pharetra, in accumsan ipsum commodo. In varius ligula posuere, sodales erat nec, tempus purus. Quisque eu posuere arcu, ut pellentesque</p>
     <p>Integer pretium fringilla mauris, sed cursus purus consectetur eu. Donec vitae placerat enim. Nam dictum purus nec diam pharetra, in accumsan ipsum commodo. In varius ligula posuere, sodales erat nec, tempus purus. Quisque eu posuere arcu, ut pellentesque</p>
     <p>Integer pretium fringilla mauris, sed cursus purus consectetur eu. Donec vitae placerat enim. Nam dictum purus nec diam pharetra, in accumsan ipsum commodo. In varius ligula posuere, sodales erat nec, tempus purus. Quisque eu posuere arcu, ut pellentesque</p>
@@ -58,11 +127,11 @@ nav {
     <!--This would be useful for FAQ-->
     <details>
         <summary>Details</summary>
-        this is how you do a details.
+        this is how you do a details. wnno nwooqho infiniwou niubnqiubn ifqbnoifnq oinfoiqwnof qwf qf uihbiufdwq uihfuihqiuwhfuih qiuwbfuhqwiuhfiuwqh iuhfuiqwghuifgqiw gbiyufgbigqiuw gfuiqwiufhiuoqwhfiuhqwiufhqwiuh uiqwhfhqw ifhiquwh hqi hfiu qhiufhqiuhf iuqhiufh iqhwifhq hfihq hfh q
     </details>
   </section>
   <section id="articles" class="container">
-    <article class="post">
+    <article class="post, stone-panel">
       <header>
         <figure>
           <img src="http://placehold.it/300x200?text=Placeholder+Image" alt="Placeholder" />
@@ -74,7 +143,7 @@ nav {
       </p>
       <footer class="post-meta"> Posted by <a href="#">Post Author</a></footer>
     </article>
-    <article class="post">
+    <article class="post, stone-panel">
       <header>
         <figure>
           <img src="http://placehold.it/300x200?text=Placeholder+Image" alt="Placeholder" />
@@ -86,7 +155,7 @@ nav {
       </p>
       <footer class="post-meta"> Posted by <a href="#">Post Author</a></footer>
     </article>
-    <article class="post">
+    <article class="post, stone-panel">
       <header>
         <figure>
           <img src="http://placehold.it/300x200?text=Placeholder+Image" alt="Placeholder" />
@@ -101,7 +170,7 @@ nav {
   </section>
   <aside role="complementary">
     <div class="container">
-      <article class="widget">
+      <article class="widget, stone-panel">
         <header>
           <h2>Sample Sidebar Item </h2>
         </header>
@@ -109,7 +178,7 @@ nav {
           Donec posuere euismod purus, eu scelerisque risus pellentesque eu. Vestibulum sed tincidunt metus. <a href="#">Read More &raquo;</a></p>
         <footer>Widget Footer</footer>
       </article>
-      <article class="widget">
+      <article class="widget, stone-panel">
         <header>
           <h2>Sample Sidebar Item </h2>
         </header>
