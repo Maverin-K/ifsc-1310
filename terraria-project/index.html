@@ -66,6 +66,17 @@ nav.primary li a {
   display: block;
 }
 
+.full-width-line {
+  border-bottom:1px solid #000000;
+  padding-bottom:4em;
+  margin-bottom:4em;
+}
+
+.section-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 .stone-panel {
   max-width: 900px;
   margin: 2rem auto;
@@ -83,6 +94,77 @@ nav.primary li a {
   box-sizing: border-box;
   overflow-wrap: break-word;
 }
+
+.emerald-panel {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 3rem 2rem;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px black;
+  border-radius: 12px;
+
+  background-image: url('../terraria-project/assets/img/emerald-ore-edited.png');
+  background-size: 100% 100%; /* fills container */
+  background-repeat: no-repeat;
+  background-position: center;
+
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+}
+
+/* -------- Articles -------- */
+
+header.articles h2 {
+  text-align: center;
+  padding: 4rem;
+/*or Top, Right, Bottom, Left */
+  margin-bottom:2em;
+  background-image: url(../terraria-project/assets/img/../img/emerald-ore-edited.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  color:#ffffff;
+  font-size:3.5rem;
+  text-shadow: 2px 2px black;
+}
+
+
+section#articles.container {
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  flex-wrap: wrap;
+  border-bottom:1px solid #000000;
+  padding-bottom:4em;
+  margin-bottom:4em;
+}
+
+
+/* -------- Aside Content -------- */
+aside .container {
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+/* ------- Footer --------*/
+footer#colophon {
+  background-image:url(../terraria-project/assets/img/dirt-block-edited.jpg);
+}
+
+#colophon h6 {
+  padding: 20px;
+  margin: 0;
+  color: #000000;
+  text-align: center;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+
 
 /* Responsive scaling */
 @media screen and (max-width: 600px) {
@@ -111,14 +193,16 @@ nav.primary li a {
     <h2>300 hours later</h2>
     <nav role="navigation" class="primary">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Wiki</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="wiki.html">Wiki</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
-  <section class="content, stone-panel">
+  <div class="full-width-line">
+  <div class="section-wrapper">
+  <section class="content stone-panel">
     <h2>Terraria Content</h2>
     <p>Integer pretium fringilla mauris, sed cursus purus consectetur eu. Donec vitae placerat enim. Nam dictum purus nec diam pharetra, in accumsan ipsum commodo. In varius ligula posuere, sodales erat nec, tempus purus. Quisque eu posuere arcu, ut pellentesque</p>
     <p>Integer pretium fringilla mauris, sed cursus purus consectetur eu. Donec vitae placerat enim. Nam dictum purus nec diam pharetra, in accumsan ipsum commodo. In varius ligula posuere, sodales erat nec, tempus purus. Quisque eu posuere arcu, ut pellentesque</p>
@@ -130,8 +214,14 @@ nav.primary li a {
         this is how you do a details. wnno nwooqho infiniwou niubnqiubn ifqbnoifnq oinfoiqwnof qwf qf uihbiufdwq uihfuihqiuwhfuih qiuwbfuhqwiuhfiuwqh iuhfuiqwghuifgqiw gbiyufgbigqiuw gfuiqwiufhiuoqwhfiuhqwiufhqwiuh uiqwhfhqw ifhiquwh hqi hfiu qhiufhqiuhf iuqhiufh iqhwifhq hfihq hfh q
     </details>
   </section>
+  </div>
+  </div>
+  <section>
+  <header roll="banner" class="articles">
+    <h2>Articles</h2>
+  </header>
   <section id="articles" class="container">
-    <article class="post, stone-panel">
+    <article class="post emerald-panel">  
       <header>
         <figure>
           <img src="http://placehold.it/300x200?text=Placeholder+Image" alt="Placeholder" />
@@ -143,7 +233,7 @@ nav.primary li a {
       </p>
       <footer class="post-meta"> Posted by <a href="#">Post Author</a></footer>
     </article>
-    <article class="post, stone-panel">
+    <article class="post emerald-panel">
       <header>
         <figure>
           <img src="http://placehold.it/300x200?text=Placeholder+Image" alt="Placeholder" />
@@ -155,7 +245,7 @@ nav.primary li a {
       </p>
       <footer class="post-meta"> Posted by <a href="#">Post Author</a></footer>
     </article>
-    <article class="post, stone-panel">
+    <article class="post emerald-panel">
       <header>
         <figure>
           <img src="http://placehold.it/300x200?text=Placeholder+Image" alt="Placeholder" />
@@ -168,9 +258,10 @@ nav.primary li a {
       <footer class="post-meta"> Posted by <a href="#">Post Author</a></footer>
     </article>
   </section>
+</section>
   <aside role="complementary">
     <div class="container">
-      <article class="widget, stone-panel">
+      <article class="widget stone-panel">
         <header>
           <h2>Sample Sidebar Item </h2>
         </header>
@@ -178,7 +269,7 @@ nav.primary li a {
           Donec posuere euismod purus, eu scelerisque risus pellentesque eu. Vestibulum sed tincidunt metus. <a href="#">Read More &raquo;</a></p>
         <footer>Widget Footer</footer>
       </article>
-      <article class="widget, stone-panel">
+      <article class="widget stone-panel">
         <header>
           <h2>Sample Sidebar Item </h2>
         </header>
@@ -189,7 +280,7 @@ nav.primary li a {
     </div>
   </aside>
   <footer id="colophon" role="contentinfo">
-    <h6>&copy; 2021 Student Name</h6>
+    <h6>&copy; 2025 Maverin Kaplan</h6>
   </footer>
 </body>
 
